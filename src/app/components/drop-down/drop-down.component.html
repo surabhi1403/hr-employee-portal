@@ -1,0 +1,4 @@
+<select id="employeetype" class="form-control"  (change)="onSelect($event)">
+    <option value="" selected="true" disabled> Please select</option>
+    <option *ngFor="let item of dropDownItem"  [value]="item">{{item}}</option>
+</select>
