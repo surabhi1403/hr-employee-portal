@@ -6,7 +6,7 @@ import { map } from "rxjs/operators";
   providedIn: "root",
 })
 export class DbService {
-  dbPath = "users";
+  dbPath = "Signup";
   constructor(public db: AngularFirestore) {}
 
   documentToDomainObject = (_) => {
@@ -59,13 +59,14 @@ export class DbService {
       .snapshotChanges();
   }
 
-  createUser(value, avatar) {
+  createUser(value) {
     return this.db.collection(this.dbPath).add({
-      name: value.name,
-      nameToSearch: value.name.toLowerCase(),
-      surname: value.surname,
-      age: parseInt(value.age),
-      avatar: avatar,
+		 name:value.name,
+    department:value.department,
+	address:value.address,
+		  designation:value.designation,
+		    contact:+value.contact,
+			  email:value.email,
     });
   }
 }

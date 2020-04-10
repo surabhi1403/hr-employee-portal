@@ -6,13 +6,14 @@ import { AdminComponent } from './containers/admin/admin.component';
 import { EmployeeComponent } from './containers/employee/employee.component';
 
 
+
 const routes: Routes = [
   {path:'',redirectTo:'/login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'employee',component:EmployeeComponent },
   {path:'signup',component:SignupComponent},
   {path:'admin',component:AdminComponent},
-
+  
 
 ];
 
